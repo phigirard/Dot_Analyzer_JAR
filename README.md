@@ -56,9 +56,31 @@ For more information about the Voronoi diagram, see the [Wikipedia webpage](http
 <br>
 <i>Fig. 5:</i> (Left) Delaunay triangulation (in yellow) and Voronoi tessellation (in red) of points (in white) that define the dot positions of the Fig. 1. You can choose to represent only the Voronoi tessalation or the Delaunay triangulation.</p><br>
 
-8. “Besag’s L Function” (Fig. 6): The Besag's L Function is based on the Ripley's K Function. Details of various theoretical aspects of K are in books [**[5-7]**](#references). Ripley’s K function is a popular tool to analyze mapped spatial point pattern. It is defined without edge correction as:
+8. “Besag’s <i>L</i> Function” (Fig. 6): The Besag's <i>L</i> Function is based on the Ripley's <i>K</i> Function. Details of various theoretical aspects of K are in books [**[5-7]**](#references). Ripley’s K function is a popular tool to analyze mapped spatial point pattern. It is defined without edge correction as:
 <p align="center">
-	<img src="./images/Fig6.png" width="500" 
+	<img src="./images/Formula01.png" width="200">
+</p>
+If points are distributed independently from each other, g(ρ)=1 for all values of ρ, so <i>K(r) = πr<sup>2</sup></i>. This value is used as a benchmark: 
+
+* <i>K(r) > πr<sup>2</sup></i> indicates that the average value of g(ρ) is greater than 1. The probability to find a neighbor at the distance ρ is then greater than the probability to find a point in the same area anywhere in the domain: points are aggregated. <br>
+
+* Inversely, <i>K(r) < πr<sup>2</sup></i> indicates that the average neighbor density is smaller than the average point density on the studied domain. Points are dispersed. <i>K(r)</i> is estimated by the ratio of the average number of neighbors on the density, estimated itself by the total number of points divided by the domain area λ which is the density (number per unit area = N/area of the picture) of event. Given that only the points in a bounded window of observation can be studied, edge correction is necessary to obtain precise estimates. The weighted edge-corrected function <i>K(r)</i> is defined as:<br>
+<p align="center">
+	<img src="./images/Formula05.png" width="300">
+</p>
+where <i>I(r<sub>ij</sub> ≤ r)</i> is an indication function with values either 0 if the condition does not hold or 1 if the condition holds and where the weight <i>w<sub>ij</sub>(r)</i> is the proportion of the circumference of a circle centered at the gold-dot <i>i</i> passing through the gold-dot <i>j</i> and that is inside the region of interest (ROI), which is defined as <br>
+<p align="center">
+	<img src="./images/Formula06.png" width="700">
+</p>
+where <i>r<sub>ib</sub></i> is the distance from the gold-dot <i>i</i> to the nearest boundary, <i>r<sub>ib1</sub></i> and <i>r<sub>ib2</sub></i> are the distances from gold-dot <i>i</i> to the nearest two boundaries. The first case when the circle is within the ROI, the second case is when the circle intersects with only one border and the last case is when the circle intersects two borders in a corner. Note that <i>w<sub>ij</sub>(r)</i> could be unbounded as <i>r</i> increases in practice. Following the recommendation by Ripley,<i>w<sub>ij</sub>(r)</i> could be restricted to be less than or equal to 4 for the gold-dot <i>i</i> having distance to <i>j</i> greater than the distance from the gold-dot <i>i</i> to the nearest boundary.<br>
+The Besag's <i>L</i> function is just a normalization of the Ripley's function: <br>
+<p align="center">
+	<img src="./images/Formula07.png" width="300">
+</p>
+because for a homogenous Poisson process, the Ripley function is <i>K(r) = πr<sup>2</sup></i>. So the Besag's function is a measure of the deviation from a Poisson distribution and it is very useful because <i>L(r)</i> has the advantage of linearizing <i>K(r)</i> and stabilizing its variance and has an expected value of zero for Poisson distribution. So <i>L(r)</i> can also be considered as a measure of the clusterization.<br>
+
+<p align="center">
+	<img src="./images/Fig6.png" width="500"
          alt="Besag’s L Function">
 <br>
 <i>Fig. 6:</i> Besag’s L Function of Fig. 1.</p><br>
