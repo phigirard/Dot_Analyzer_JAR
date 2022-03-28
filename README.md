@@ -3,6 +3,8 @@
 This document describes the workings of the ImageJ plugin **Dot Analyzer V3**, written by Philippe Girard ([email](philippe.girard@ijm.fr)).
 
 The plugin was written to analyse SEM micrograph as shown here:
+![Albuquerque, New Mexico](./images/Fig1.png)
+*A single track trail outside of Albuquerque, New Mexico.*
 
 
 ## <a name="installation-pane"></a>1. Installation instructions
