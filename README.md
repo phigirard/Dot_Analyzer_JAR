@@ -58,7 +58,7 @@ For more information about the Voronoi diagram, see the [Wikipedia webpage](http
 
 8. “Besag’s <i>L</i> Function” (Fig. 6): The Besag's <i>L</i> Function is based on the Ripley's <i>K</i> Function. Details of various theoretical aspects of K are in books [**[5-7]**](#references). Ripley’s K function is a popular tool to analyze mapped spatial point pattern. It is defined without edge correction as:
 <p align="center">
-	<img src="./images/Formula01.png" width="200">
+	<img src="./images/Formula01.png" width="300">
 </p>
 If points are distributed independently from each other, g(ρ)=1 for all values of ρ, so <i>K(r) = πr<sup>2</sup></i>. This value is used as a benchmark: 
 
@@ -75,9 +75,10 @@ where <i>I(r<sub>ij</sub> ≤ r)</i> is an indication function with values eithe
 where <i>r<sub>ib</sub></i> is the distance from the gold-dot <i>i</i> to the nearest boundary, <i>r<sub>ib1</sub></i> and <i>r<sub>ib2</sub></i> are the distances from gold-dot <i>i</i> to the nearest two boundaries. The first case when the circle is within the ROI, the second case is when the circle intersects with only one border and the last case is when the circle intersects two borders in a corner. Note that <i>w<sub>ij</sub>(r)</i> could be unbounded as <i>r</i> increases in practice. Following the recommendation by Ripley,<i>w<sub>ij</sub>(r)</i> could be restricted to be less than or equal to 4 for the gold-dot <i>i</i> having distance to <i>j</i> greater than the distance from the gold-dot <i>i</i> to the nearest boundary.<br>
 The Besag's <i>L</i> function is just a normalization of the Ripley's function: <br>
 <p align="center">
-	<img src="./images/Formula07.png" width="300">
+	<img src="./images/Formula07.png" width="200">
 </p>
 because for a homogenous Poisson process, the Ripley function is <i>K(r) = πr<sup>2</sup></i>. So the Besag's function is a measure of the deviation from a Poisson distribution and it is very useful because <i>L(r)</i> has the advantage of linearizing <i>K(r)</i> and stabilizing its variance and has an expected value of zero for Poisson distribution. So <i>L(r)</i> can also be considered as a measure of the clusterization.<br>
+<br>
 
 <p align="center">
 	<img src="./images/Fig6.png" width="500"
