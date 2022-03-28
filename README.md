@@ -24,7 +24,7 @@ When you start the plugin, you have to define different parameters for the analy
 	<img src="./images/Fig2.png" width="400" 
          alt="“Parameters” main window">
 <br>
-<i>Fig. 2:</i> The “Parameters” main window</p>
+<i>Fig. 2:</i> The “Parameters” main window</p><br>
 
 
 
@@ -39,41 +39,41 @@ You must indicate:
 	<img src="./images/Fig3.png" width="700" 
          alt="6-nearest neighbor diagram">
 <br>
-<i>Fig. 3:</i> 6-nearest neighbor diagram of the Fig. 1.</p>
-6. “Voronoi diagram (or tessellation)” [**[1-4]**](#references-pane) (Fig. 4 and Fig. 5). The Voronoi diagram is a simple mathematical construct that has proved useful in fields as diverse as environmental studies, cell biology, crystallography, transportation planning, and communications theory. Given a set of points (the center of mass of each gold-dot), the Voronoi diagram defines a series of cells surrounding each point. Each cell contains all points that are closer to its defining point than to any other point in the set. Subsequently, the “borders” of the cells are equidistant between the defining points of adjacent cells.By doing so, the number of borders give you the number of closest neighbors. The difference by the previous diagram (6 closest-neighbor diagram) is that you do not force each spot to have 6 neighbors. For patterns that contain non-uniform defect structures as disinclination, this diagram is more appropriated than the previous one. 
+<i>Fig. 3:</i> 6-nearest neighbor diagram of the Fig. 1.</p><br>
+6. “Voronoi diagram (or tessellation)” [**[1-4]**](# references-pane) (Fig. 4 and Fig. 5). The Voronoi diagram is a simple mathematical construct that has proved useful in fields as diverse as environmental studies, cell biology, crystallography, transportation planning, and communications theory. Given a set of points (the center of mass of each gold-dot), the Voronoi diagram defines a series of cells surrounding each point. Each cell contains all points that are closer to its defining point than to any other point in the set. Subsequently, the “borders” of the cells are equidistant between the defining points of adjacent cells.By doing so, the number of borders give you the number of closest neighbors. The difference by the previous diagram (6 closest-neighbor diagram) is that you do not force each spot to have 6 neighbors. For patterns that contain non-uniform defect structures as disinclination, this diagram is more appropriated than the previous one. 
 For more information about the Voronoi diagram, see the [Wikipedia webpage](http://en.wikipedia.org/wiki/Voronoi_diagram) 
 <p align="center">
 	<img src="./images/Fig4.png" width="500" 
          alt="Voronoi diagram">
 <br>
-<i>Fig. 4:</i> (Left) Points that make the Voronoi diagram. (Center) A Voronoi diagram constructed for those points. (Right) Delaunay in red and Voronoi in black constructed together on the same graphic.</p>
+<i>Fig. 4:</i> (Left) Points that make the Voronoi diagram. (Center) A Voronoi diagram constructed for those points. (Right) Delaunay in red and Voronoi in black constructed together on the same graphic.</p><br>
 7. “Delaunay diagram (or triangulation)” [**[3-4]**](#references-pane) (Fig. 4 and Fig. 5). In graph theory, the Delaunay triangulation corresponds to the dual graph of the Voronoi tessellation. By dual, I mean to draw a line segment between two Voronoi vertices if their Voronoi polygons have a common edge, or in more mathematical terminology: there is a natural bijection between the two which reverses the face inclusions. This diagram gives the distance between the closest neighbors of each gold-dot. For more information about the Voronoi diagram, see the [Wikipedia webpage](http://en.wikipedia.org/wiki/Delaunay_triangulation).
 <p align="center">
 	<img src="./images/Fig5.png" width="700" 
          alt="Delaunay triangulation">
 <br>
-<i>Fig. 5:</i> (Left) Delaunay triangulation (in yellow) and Voronoi tessellation (in red) of points (in white) that define the dot positions of the Fig. 1. You can choose to represent only the Voronoi tessalation or the Delaunay triangulation.</p>
+<i>Fig. 5:</i> (Left) Delaunay triangulation (in yellow) and Voronoi tessellation (in red) of points (in white) that define the dot positions of the Fig. 1. You can choose to represent only the Voronoi tessalation or the Delaunay triangulation.</p><br>
 
 8. “Besag’s L Function” (Fig. 6): The Besag's L Function is based on the Ripley's K Function. Details of various theoretical aspects of K are in books [**[5-7]**](#references-pane). Ripley’s K function is a popular tool to analyze mapped spatial point pattern. It is defined without edge correction as:
 <p align="center">
 	<img src="./images/Fig6.png" width="500" 
          alt="Besag’s L Function">
 <br>
-<i>Fig. 6:</i> Besag’s L Function of Fig. 1.</p>
+<i>Fig. 6:</i> Besag’s L Function of Fig. 1.</p><br>
 
 9. “Pair correlation function” (Fig. 7) is measured with the Epanechnikov kernel [**[8]**](#references-pane) and an Ohser-Stoyan edge corrector factor [**[9]**](#references-pane). The estimation of the pair correlation function g(r) can be obtained by determining all pairs of gold-dots having inter-gold-dot distance in some small interval and counting their numbers. Since g(r) is a density function, a more elegant method can be employed. Following the recommendation of Penttinen et al. [**[6]**](#references-pane), a kernel estimator is used for g(r). The chosen kernel function is the Epanechnikov kernel: 
 <p align="center">
 	<img src="./images/Fig7.png" width="500" 
          alt="Pair Correlation Function">
 <br>
-<i>Fig. 7:</i> Pair Correlation Function g(r) of Fig. 1. In red g(r)=1 corresponds to a homogeneous Poisson process.</p>
+<i>Fig. 7:</i> Pair Correlation Function g(r) of Fig. 1. In red g(r)=1 corresponds to a homogeneous Poisson process.</p><br>
 
-10. “Bond-orientational correlation function” (Fig. 8): The (global) bond-orientationel order parameter 6 was introduced by D. R. Nelson and B. I. Halperin to characterize the structural order in 2D systems [**[10-11]**](#references-pane). It is given:
+10. “Bond-orientational correlation function” (Fig. 8): The (global) bond-orientationel order parameter 6 was introduced by D. R. Nelson and B. I. Halperin to characterize the structural order in 2D systems [**[10-11]**](#References). It is given:
 <p align="center">
 	<img src="./images/Fig8.png" width="500" 
          alt="Bond-orientational Correlation Function">
 <br>
-<i>Fig. 8:</i> Bond-orientational Correlation Function g_6(r) of Fig. 1. In red is the fit of g_6(r) with an exponential decay.</p>
+<i>Fig. 8:</i> Bond-orientational Correlation Function g<sub>6</sub>(r) of Fig. 1. In red is the fit of g<sub>6</sub>(r) with an exponential decay.</p>
 
 11. “Save Spacing and Order in a table”: this indicates that you want to save the spacing and the order in a text file. If you select this option, a “Save Spacing & Order” window will appear at the end of the analysis (see below).
 
@@ -88,7 +88,7 @@ First, the image is converted to a binary image to reveal the spots (by the thre
 	<img src="./images/Fig9.png" width="900" 
          alt="Subtracted-background image (in grey) / threshold image (in red)">
 <br>
-<i>Fig. 9:</i> The Overlay: Subtracted-background image (in grey) / threshold image (in red).</p>
+<i>Fig. 9:</i> The Overlay: Subtracted-background image (in grey) / threshold image (in red).</p><br>
 
 
 
@@ -100,7 +100,7 @@ The “Results” main window gives you the results of the 6 closest-neighbor me
 	<img src="./images/Fig10.png" width="400" 
          alt="“Results” main window">
 <br>
-<i>Fig. 10:</i> The “Results” main window: Analysis of the selected region (of Fig. 9).</p>
+<i>Fig. 10:</i> The “Results” main window: Analysis of the selected region (of Fig. 9).</p><br>
 
 
 You can also restart the process if you did a mistake by clicking “Yes, please”, or press “No way!” if you want to continue (Fig. 11).
@@ -108,7 +108,7 @@ You can also restart the process if you did a mistake by clicking “Yes, please
 	<img src="./images/Fig11.png" width="300" 
          alt="Restart or not Window">
 <br>
-<i>Fig. 11:</i> Restart or not Window.</p>
+<i>Fig. 11:</i> Restart or not Window.</p><br>
 
 
 ## <a name="result-pane"></a>4. Save Result: Spacing and Order
@@ -133,7 +133,7 @@ You have to fill the different characteristics of your system in the “Save Spa
 	<img src="./images/Fig12.png" width="800" 
          alt="“Save Spacing & Order” main window">
 <br>
-<i>Fig. 12:</i> The “Save Spacing & Order” main window.</p>
+<i>Fig. 12:</i> The “Save Spacing & Order” main window.</p><br>
 
 
 The File created contains the following parameters of the analysis:
@@ -161,9 +161,9 @@ To open the file you can use a Text Edit Application or Excel (with File ▷ Imp
 	<img src="./images/Fig13.png" width="900" 
          alt="Import in Excel">
 <br>
-<i>Fig. 13:</i> In Excel use File/Import and select “Text file” (panel a). Text Import Wizard in 3 steps from Excel(panel b). Panel c is the result of the imported file corresponding to the parameters of the analysed image (Fig. 9).</p>
+<i>Fig. 13:</i> In Excel use File/Import and select “Text file” (panel a). Text Import Wizard in 3 steps from Excel(panel b). Panel c is the result of the imported file corresponding to the parameters of the analysed image (Fig. 9).</p><br>
 
-## <a name="references-pane"></a>References
+## References
 
  [1] G. F. Voronoï. Deuxième mémoire: recherches sur les paralléloèdres primitifs. J. Reine Angew. Math., 136:67–181, 1909. 
  
