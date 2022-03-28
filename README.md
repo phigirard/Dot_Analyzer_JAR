@@ -21,8 +21,8 @@ Restart ImageJ.  The plugin is installed under the menu:
 When you start the plugin, you have to define different parameters for the analysis and to select the different diagrams/plots that you want to visualize (Fig. 2).
 
 <p align="center">
-	<img src="./images/Fig2.png" width="600" 
-         alt="SEM micrograph">
+	<img src="./images/Fig2.png" width="400" 
+         alt="“Parameters” main window">
 <br>
 <i>Fig. 2:</i> The “Parameters” main window</p>
 
@@ -35,12 +35,46 @@ You must indicate:
 3. Set the minimum size (in pixels^2) to exclude objects that appear in the binary image that are clearly not objects of interest (Attention: this parameter is clearly connected to the thresholding method you have selected). This parameter is the same that appears in “Size ( ^2)” (where you have to define the minimum and the maximum size) of the “Analyze Particles” window.
 4. Select the Thresholding method: the list is the same that the one you can find directly in the Threshold window (Image ▷ Adjust ▷ Threshold…) as indicated below. The “MaxEntropy” method gives the best result on the Fig 1 but you have to consider trying different auto-threshold method. Here for example, the methods: “Default”, “IJ_IsoData” (=“Default”), “MaxEntropy”, “RenyiEntropy” and “Yen” are also good. If the threshold method you have selected do not give you the best result, you do not need to stop the plugin because it will ask you if you want to restart the analysis after the first step.
 5. Select “6-nearest neighbour diagram” if you want to visualize the 6 closest neighbours of each spots (see Fig. 3). In the analysis, the spots which are too closed to the borders are not taken into account because they do not have 6-closest neighbours as you can see on the Fig 3. Each spots is connected to its 6 neighbours with a line of different colours (red, orange, yellow, green, magenta, blue).
+<p align="center">
+	<img src="./images/Fig3.png" width="700" 
+         alt="6-nearest neighbor diagram">
+<br>
+<i>Fig. 3:</i> 6-nearest neighbor diagram of the Fig. 1.</p>
 6. “Voronoi diagram (or tessellation)” [**[1-4]**](#references-pane) (Fig. 4 and Fig. 5). The Voronoi diagram is a simple mathematical construct that has proved useful in fields as diverse as environmental studies, cell biology, crystallography, transportation planning, and communications theory. Given a set of points (the center of mass of each gold-dot), the Voronoi diagram defines a series of cells surrounding each point. Each cell contains all points that are closer to its defining point than to any other point in the set. Subsequently, the “borders” of the cells are equidistant between the defining points of adjacent cells.By doing so, the number of borders give you the number of closest neighbors. The difference by the previous diagram (6 closest-neighbor diagram) is that you do not force each spot to have 6 neighbors. For patterns that contain non-uniform defect structures as disinclination, this diagram is more appropriated than the previous one. 
 For more information about the Voronoi diagram, see the [Wikipedia webpage](http://en.wikipedia.org/wiki/Voronoi_diagram) 
-7. “Delaunay diagram (or triangulation)” [**[3-4]**](#references-pane) (Fig. 4 and Fig. 5). In graph theory, the Delaunay triangulation corresponds to the dual graph of the Voronoi tessellation. By dual, I mean to draw a line segment between two Voronoi vertices if their Voronoi polygons have a common edge, or in more mathematical terminology: there is a natural bijection between the two which reverses the face inclusions. This diagram gives the distance between the closest neighbors of each gold-dot. For more information about the Voronoi diagram, see the [Wikipedia webpage](http://en.wikipedia.org/wiki/Delaunay_triangulation)
+<p align="center">
+	<img src="./images/Fig4.png" width="500" 
+         alt="Voronoi diagram">
+<br>
+<i>Fig. 4:</i> (Left) Points that make the Voronoi diagram. (Center) A Voronoi diagram constructed for those points. (Right) Delaunay in red and Voronoi in black constructed together on the same graphic.</p>
+7. “Delaunay diagram (or triangulation)” [**[3-4]**](#references-pane) (Fig. 4 and Fig. 5). In graph theory, the Delaunay triangulation corresponds to the dual graph of the Voronoi tessellation. By dual, I mean to draw a line segment between two Voronoi vertices if their Voronoi polygons have a common edge, or in more mathematical terminology: there is a natural bijection between the two which reverses the face inclusions. This diagram gives the distance between the closest neighbors of each gold-dot. For more information about the Voronoi diagram, see the [Wikipedia webpage](http://en.wikipedia.org/wiki/Delaunay_triangulation).
+<p align="center">
+	<img src="./images/Fig5.png" width="700" 
+         alt="Delaunay triangulation">
+<br>
+<i>Fig. 5:</i> (Left) Delaunay triangulation (in yellow) and Voronoi tessellation (in red) of points (in white) that define the dot positions of the Fig. 1. You can choose to represent only the Voronoi tessalation or the Delaunay triangulation.</p>
+
 8. “Besag’s L Function” (Fig. 6): The Besag's L Function is based on the Ripley's K Function. Details of various theoretical aspects of K are in books [**[5-7]**](#references-pane). Ripley’s K function is a popular tool to analyze mapped spatial point pattern. It is defined without edge correction as:
+<p align="center">
+	<img src="./images/Fig6.png" width="500" 
+         alt="Besag’s L Function">
+<br>
+<i>Fig. 6:</i> Besag’s L Function of Fig. 1.</p>
+
 9. “Pair correlation function” (Fig. 7) is measured with the Epanechnikov kernel [**[8]**](#references-pane) and an Ohser-Stoyan edge corrector factor [**[9]**](#references-pane). The estimation of the pair correlation function g(r) can be obtained by determining all pairs of gold-dots having inter-gold-dot distance in some small interval and counting their numbers. Since g(r) is a density function, a more elegant method can be employed. Following the recommendation of Penttinen et al. [**[6]**](#references-pane), a kernel estimator is used for g(r). The chosen kernel function is the Epanechnikov kernel: 
+<p align="center">
+	<img src="./images/Fig7.png" width="500" 
+         alt="Pair Correlation Function">
+<br>
+<i>Fig. 7:</i> Pair Correlation Function g(r) of Fig. 1. In red g(r)=1 corresponds to a homogeneous Poisson process.</p>
+
 10. “Bond-orientational correlation function” (Fig. 8): The (global) bond-orientationel order parameter 6 was introduced by D. R. Nelson and B. I. Halperin to characterize the structural order in 2D systems [**[10-11]**](#references-pane). It is given:
+<p align="center">
+	<img src="./images/Fig8.png" width="500" 
+         alt="Bond-orientational Correlation Function">
+<br>
+<i>Fig. 8:</i> Bond-orientational Correlation Function g_6(r) of Fig. 1. In red is the fit of g_6(r) with an exponential decay.</p>
+
 11. “Save Spacing and Order in a table”: this indicates that you want to save the spacing and the order in a text file. If you select this option, a “Save Spacing & Order” window will appear at the end of the analysis (see below).
 
 When you have finished, press OK
@@ -50,13 +84,32 @@ When you have finished, press OK
 ### At the beginning of the process, 
 
 First, the image is converted to a binary image to reveal the spots (by the threshold method you have selected) and an overlay of the image with the subtracted background (in grey) and the threshold image (in red) is shown in order to select a rectangular ROI (in yellow) with the “Rectangle Tool” of the Toolbar to remove the text of the micrograph or the area where the plugin is not able to detect simple spots but huge multiple spot, or where there is some disinclinations. For example in the figure below, a rectangular area (in yellow) that removes the bottom part is selected (Fig 9, left). After selection, you can click OK on the frame that appears at right of the overlay. If you want to select the full image, just press ok without selection (Fig. 9, right).
+<p align="center">
+	<img src="./images/Fig9.png" width="900" 
+         alt="Subtracted-background image (in grey) / threshold image (in red)">
+<br>
+<i>Fig. 9:</i> The Overlay: Subtracted-background image (in grey) / threshold image (in red).</p>
+
+
 
 Then, the function “ParticleAnalyzer” that you can found directly under “Analyze/Analyze Particles…” is applied to detect the position of the different spots (the parameter “Min size” you have selected at the beginning is use here to remove all the spot below this size in pixel^2). This process permits to measure the centre of mass of each spot. 
 
 ### At the end of the process, 
 The “Results” main window gives you the results of the 6 closest-neighbor method (Fig 10). 
+<p align="center">
+	<img src="./images/Fig10.png" width="400" 
+         alt="“Results” main window">
+<br>
+<i>Fig. 10:</i> The “Results” main window: Analysis of the selected region (of Fig. 9).</p>
+
 
 You can also restart the process if you did a mistake by clicking “Yes, please”, or press “No way!” if you want to continue (Fig. 11).
+<p align="center">
+	<img src="./images/Fig11.png" width="200" 
+         alt="Restart or not Window">
+<br>
+<i>Fig. 11:</i> Restart or not Window.</p>
+
 
 ## <a name="result-pane"></a>4. Save Result: Spacing and Order
 
@@ -75,6 +128,12 @@ You have to fill the different characteristics of your system in the “Save Spa
 4.	Fourth row:
 	* Date of the file when it was created (automatically filled with the information of the image), 
 	* Add in an existed file (Yes = True, No = False). The created file is automatically saved in the folder of the analysed image.
+	
+<p align="center">
+	<img src="./images/Fig12.png" width="200" 
+         alt="“Save Spacing & Order” main window">
+<br>
+<i>Fig. 12:</i> The “Save Spacing & Order” main window.</p>
 
 
 The File created contains the following parameters of the analysis:
@@ -98,7 +157,11 @@ The File created contains the following parameters of the analysis:
 17. Order Parameter (with the Voronoi/Delaunay model)
 
 To open the file you can use a Text Edit Application or Excel (with File ▷ Import) as indicated in Fig. 13:
-
+<p align="center">
+	<img src="./images/Fig12.png" width="900" 
+         alt="Import in Excel">
+<br>
+<i>Fig. 13:</i> In Excel use File/Import and select “Text file” (panel a). Text Import Wizard in 3 steps from Excel(panel b). Panel c is the result of the imported file corresponding to the parameters of the analysed image (Fig. 9).</p>
 
 ## <a name="references-pane"></a>References
 
