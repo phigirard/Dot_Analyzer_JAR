@@ -12,7 +12,7 @@ The plugin was written to analyse SEM micrograph as shown here:
 
 ## 1. Installation instructions
 To install the plugin, just copy the file Dot_Analyzer.jar into the “plugins” directory, within the “ImageJ” directory.  
-On PCs this directory is under “Program Files” and on a Mac it is under “Applications”.  Both require certain privileges to do this.  
+On PCs this directory is under “Program Files” and on a MacOSX it is under “Applications”.  Both require certain privileges to do this.  
 Restart ImageJ.  The plugin is installed under the menu: 
 
 > Plugins ▷ Dot Analyzer ▷ Dot Analyzer v3.1…
