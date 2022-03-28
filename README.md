@@ -58,7 +58,7 @@ For more information about the Voronoi diagram, see the [Wikipedia webpage](http
 
 8. “Besag’s <i>L</i> Function” (Fig. 6): The Besag's <i>L</i> Function is based on the Ripley's <i>K</i> Function. Details of various theoretical aspects of K are in books [**[5-7]**](#references). Ripley’s K function is a popular tool to analyze mapped spatial point pattern. It is defined without edge correction as:
 <p align="center">
-	<img src="./images/Formula01.png" width="300">
+	<img src="./images/Formula01.png" width="250">
 </p>
 If points are distributed independently from each other, g(ρ)=1 for all values of ρ, so <i>K(r) = πr<sup>2</sup></i>. This value is used as a benchmark: 
 
@@ -86,7 +86,19 @@ because for a homogenous Poisson process, the Ripley function is <i>K(r) = πr<s
 <br>
 <i>Fig. 6:</i> Besag’s L Function of Fig. 1.</p><br>
 
-9. “Pair correlation function” (Fig. 7) is measured with the Epanechnikov kernel [**[8]**](#references) and an Ohser-Stoyan edge corrector factor [**[9]**](#references). The estimation of the pair correlation function g(r) can be obtained by determining all pairs of gold-dots having inter-gold-dot distance in some small interval and counting their numbers. Since g(r) is a density function, a more elegant method can be employed. Following the recommendation of Penttinen et al. [**[6]**](#references), a kernel estimator is used for g(r). The chosen kernel function is the Epanechnikov kernel: 
+9. “Pair correlation function” (Fig. 7) is measured with the Epanechnikov kernel [**[8]**](#references) and an Ohser-Stoyan edge corrector factor [**[9]**](#references). The estimation of the pair correlation function <i>g(r)</i> can be obtained by determining all pairs of gold-dots having inter-gold-dot distance in some small interval and counting their numbers. Since <i>g(r)</i> is a density function, a more elegant method can be employed. Following the recommendation of Penttinen et al. [**[6]**](#references), a kernel estimator is used for <i>g(r)</i>. The chosen kernel function is the Epanechnikov kernel: 
+
+The kernel δ is very important because it determines the degree of smoothness of the function. Based on Penttinen et al. [**[8]**](#references), set 
+
+
+in this study. Then, the pair correlation function can be estimated as:
+
+
+where <i>w(.)</i> is the Epanechnikov kernel function defined above, <i>λ=N/A</i> is the estimated density (gold-dots per unit area), <i>r<sub>ij</sub></i> is the distance between the gold-dots <i>i</i> and <i>j</i> and <i>s(r)</i> is the edge correction factor. For rectangular or square plots, the Ohser–Stoyan edge correction factor [**[9]**](#references) can be adopted:
+
+
+where <i>b<sub>1</sub></i> and <i>b<sub>2</sub></i> are the side lengths of the image (that means the height and the width) and <i>s(r)<A=width*height</i>.
+
 <p align="center">
 	<img src="./images/Fig7.png" width="500" 
          alt="Pair Correlation Function">
