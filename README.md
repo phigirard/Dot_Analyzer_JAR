@@ -3,8 +3,11 @@
 This document describes the workings of the ImageJ plugin **Dot Analyzer V3**, written by Philippe Girard ([email](philippe.girard@ijm.fr)).
 
 The plugin was written to analyse SEM micrograph as shown here:
-![Albuquerque, New Mexico](./images/Fig1.png)
-*A single track trail outside of Albuquerque, New Mexico.*
+<p align="center">
+	<img src="./images/Fig1.png" width="700" 
+         alt="SEM micrograph">
+<br>
+<i>Fig. 1:</i> A typical SEM micrograph.</p>
 
 
 ## <a name="installation-pane"></a>1. Installation instructions
@@ -16,6 +19,14 @@ Restart ImageJ.  The plugin is installed under the menu:
 
 ## <a name="parameters-pane"></a>2. The “Parameters” main window.
 When you start the plugin, you have to define different parameters for the analysis and to select the different diagrams/plots that you want to visualize (Fig. 2).
+
+<p align="center">
+	<img src="./images/Fig2.png" width="600" 
+         alt="SEM micrograph">
+<br>
+<i>Fig. 2:</i> The “Parameters” main window</p>
+
+
 
 You must indicate:
 
