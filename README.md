@@ -111,19 +111,29 @@ where <i>b<sub>1</sub></i> and <i>b<sub>2</sub></i> are the side lengths of the 
 	<img src="./images/Fig7.png" width="500" 
          alt="Pair Correlation Function">
 <br>
-<i>Fig. 7:</i> Pair Correlation Function g(r) of Fig. 1. In red g(r)=1 corresponds to a homogeneous Poisson process.</p><br>
+	<i>Fig. 7:</i> Pair Correlation Function <i>g(r)</i> of Fig. 1. In red <i>g(r)=1</i> corresponds to a homogeneous Poisson process.</p><br>
 
 10. “Bond-orientational correlation function” (Fig. 8): The (global) bond-orientationel order parameter 6 was introduced by D. R. Nelson and B. I. Halperin to characterize the structural order in 2D systems [**[10-11]**](#references). It is given:<br>
-
+<p align="center">
+	<img src="./images/Formula12.png" width="200">
+</p>
 with <i>ψ<sub>6</sub></i> is the local value for the particle <i>i</i> located at <i>r=(x,y)</i>:<br>
-
-
+<p align="center">
+	<img src="./images/Formula13.png" width="200">
+</p>
 where I is the imaginary unit (I<sup>2</sup>=-1), <i>θ<sub>ij</sub></i> is the angle between the particles <i>i</i> and <i>j</i> and an arbitrary but fixed reference axis and <i>n<sub>i</sub></i> the number of nearest neighbors of the dot <i>i</i>. The bond-orientational correlation length <i>ξ<sub>0</sub></i> was extracted from the “zero-momentum” correlation function of <i>ψ<sub>6</sub></i> which is called bond-orientational correlation function <i>g<sub>6</sub>(r)</i> and defined by:<br>
-
+<p align="center">
+	<img src="./images/Formula14.png" width="800">
+</p>
 where the denominator is related to the pair correlation function <i>g(r)</i> and:<br>
-
+<p align="center">
+	<img src="./images/Formula15.png" width="200">
+</p>
 
 For a 2D system (or the quasi long-ranged bond orientational order of the hexatic state), the envelope of this correlation function decay to zero exponentially [**[12-14]**](#references):<br>
+<p align="center">
+	<img src="./images/Formula16.png" width="200">
+</p>
 
 Hence, <i>ξ<sub>0</sub></i> is a measure for the typical size of the single crystalline domain, i.e., larger is <i>ξ<sub>0</sub></i> and larger is the crystalline domain (and better is the order). The bond-orientational correlation length <i>ξ<sub>0</sub></i> is determined by fitting <i>log(g<sub>6</sub>(r))</i> with a line Ar+B by using the fitting algorithm described in Numerical Recipes Section 15.2. The plugin shows the function <i>g<sub>6</sub>(r)</i> with the exponential fit in red and the length <i>ξ<sub>0</sub></i> (with the χ<sup>2</sup> test) in the same plot (Fig. 8). <br>
 
@@ -132,7 +142,7 @@ Hence, <i>ξ<sub>0</sub></i> is a measure for the typical size of the single cry
 	<img src="./images/Fig8.png" width="500" 
          alt="Bond-orientational Correlation Function">
 <br>
-<i>Fig. 8:</i> Bond-orientational Correlation Function g<sub>6</sub>(r) of Fig. 1. In red is the fit of g<sub>6</sub>(r) with an exponential decay.</p>
+	<i>Fig. 8:</i> Bond-orientational Correlation Function <i>g<sub>6</sub>(r)</i> of Fig. 1. In red is the fit of <i>g<sub>6</sub>(r)</i> with an exponential decay.</p>
 
 11. “Save Spacing and Order in a table”: this indicates that you want to save the spacing and the order in a text file. If you select this option, a “Save Spacing & Order” window will appear at the end of the analysis (see below).<br>
 
@@ -216,7 +226,7 @@ The File created contains the following parameters of the analysis:
 16. Sterror in nm (with the Voronoi/Delaunay model)
 17. Order Parameter (with the Voronoi/Delaunay model)
 
-To open the file you can use a Text Edit Application or Excel (with File ▷ Import) as indicated in Fig. 13:
+To open the file you can use a spreadsheet software or Excel (with File ▷ Import) as indicated in Fig. 13:
 <p align="center">
 	<img src="./images/Fig13.png" width="900" 
          alt="Import in Excel">
