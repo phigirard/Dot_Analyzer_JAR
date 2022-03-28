@@ -40,6 +40,7 @@ You must indicate:
          alt="6-nearest neighbor diagram">
 <br>
 <i>Fig. 3:</i> 6-nearest neighbor diagram of the Fig. 1.</p><br>
+
 6. Voronoi diagram (or tessellation) [**[1-4]**](#references). The Voronoi diagram is a simple mathematical construct that has proved useful in fields as diverse as environmental studies, cell biology, crystallography, transportation planning, and communications theory. Given a set of points (the center of mass of each gold-dot), the Voronoi diagram defines a series of cells surrounding each point. Each cell contains all points that are closer to its defining point than to any other point in the set. Subsequently, the “borders” of the cells are equidistant between the defining points of adjacent cells.By doing so, the number of borders give you the number of closest neighbors. The difference by the previous diagram (6 closest-neighbor diagram) is that you do not force each spot to have 6 neighbors. For patterns that contain non-uniform defect structures as disinclination, this diagram is more appropriated than the previous one. 
 For more information about the Voronoi diagram, see the [Wikipedia webpage](http://en.wikipedia.org/wiki/Voronoi_diagram).<br>
 <p align="center">
@@ -47,6 +48,7 @@ For more information about the Voronoi diagram, see the [Wikipedia webpage](http
          alt="Voronoi diagram">
 <br>
 <i>Fig. 4:</i> (Left) Points that make the Voronoi diagram. (Center) A Voronoi diagram constructed for those points. (Right) Delaunay in red and Voronoi in black constructed together on the same graphic.</p><br>
+
 7. Delaunay diagram (or triangulation) [**[3-4]**](#references). In graph theory, the Delaunay triangulation corresponds to the dual graph of the Voronoi tessellation. By dual, I mean to draw a line segment between two Voronoi vertices if their Voronoi polygons have a common edge, or in more mathematical terminology: there is a natural bijection between the two which reverses the face inclusions. This diagram gives the distance between the closest neighbors of each gold-dot. For more information about the Voronoi diagram, see the [Wikipedia webpage](http://en.wikipedia.org/wiki/Delaunay_triangulation).<br>
 <p align="center">
 	<img src="./images/Fig5.png" width="700" 
@@ -54,7 +56,7 @@ For more information about the Voronoi diagram, see the [Wikipedia webpage](http
 <br>
 <i>Fig. 5:</i> (Left) Delaunay triangulation (in yellow) and Voronoi tessellation (in red) of points (in white) that define the dot positions of the Fig. 1. You can choose to represent only the Voronoi tessalation or the Delaunay triangulation.</p><br>
 
-8. “Besag’s L Function” (Fig. 6): The Besag's L Function is based on the Ripley's K Function. Details of various theoretical aspects of K are in books [**[5-7]**](#References). Ripley’s K function is a popular tool to analyze mapped spatial point pattern. It is defined without edge correction as:
+8. “Besag’s L Function” (Fig. 6): The Besag's L Function is based on the Ripley's K Function. Details of various theoretical aspects of K are in books [**[5-7]**](#references). Ripley’s K function is a popular tool to analyze mapped spatial point pattern. It is defined without edge correction as:
 <p align="center">
 	<img src="./images/Fig6.png" width="500" 
          alt="Besag’s L Function">
