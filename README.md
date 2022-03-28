@@ -105,7 +105,7 @@ The “Results” main window gives you the results of the 6 closest-neighbor me
 
 You can also restart the process if you did a mistake by clicking “Yes, please”, or press “No way!” if you want to continue (Fig. 11).
 <p align="center">
-	<img src="./images/Fig11.png" width="200" 
+	<img src="./images/Fig11.png" width="300" 
          alt="Restart or not Window">
 <br>
 <i>Fig. 11:</i> Restart or not Window.</p>
@@ -130,7 +130,7 @@ You have to fill the different characteristics of your system in the “Save Spa
 	* Add in an existed file (Yes = True, No = False). The created file is automatically saved in the folder of the analysed image.
 	
 <p align="center">
-	<img src="./images/Fig12.png" width="200" 
+	<img src="./images/Fig12.png" width="800" 
          alt="“Save Spacing & Order” main window">
 <br>
 <i>Fig. 12:</i> The “Save Spacing & Order” main window.</p>
@@ -158,7 +158,7 @@ The File created contains the following parameters of the analysis:
 
 To open the file you can use a Text Edit Application or Excel (with File ▷ Import) as indicated in Fig. 13:
 <p align="center">
-	<img src="./images/Fig12.png" width="900" 
+	<img src="./images/Fig13.png" width="900" 
          alt="Import in Excel">
 <br>
 <i>Fig. 13:</i> In Excel use File/Import and select “Text file” (panel a). Text Import Wizard in 3 steps from Excel(panel b). Panel c is the result of the imported file corresponding to the parameters of the analysed image (Fig. 9).</p>
