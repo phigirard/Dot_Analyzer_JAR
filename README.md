@@ -68,7 +68,7 @@ For more information about the Voronoi diagram, see the [Wikipedia webpage](http
 <br>
 <i>Fig. 7:</i> Pair Correlation Function g(r) of Fig. 1. In red g(r)=1 corresponds to a homogeneous Poisson process.</p><br>
 
-10. “Bond-orientational correlation function” (Fig. 8): The (global) bond-orientationel order parameter 6 was introduced by D. R. Nelson and B. I. Halperin to characterize the structural order in 2D systems [**[10-11]**](## References). It is given:
+10. “Bond-orientational correlation function” (Fig. 8): The (global) bond-orientationel order parameter 6 was introduced by D. R. Nelson and B. I. Halperin to characterize the structural order in 2D systems [**[10-11]**](# References). It is given:
 <p align="center">
 	<img src="./images/Fig8.png" width="500" 
          alt="Bond-orientational Correlation Function">
