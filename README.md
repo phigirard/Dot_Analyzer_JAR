@@ -72,7 +72,7 @@ where <i>I(r<sub>ij</sub> ≤ r)</i> is an indication function with values eithe
 <p align="center">
 	<img src="./images/Formula06.png" width="700">
 </p>
-where <i>r<sub>ib</sub></i> is the distance from the gold-dot <i>i</i> to the nearest boundary, <i>r<sub>ib1</sub></i> and <i>r<sub>ib2</sub></i> are the distances from gold-dot <i>i</i> to the nearest two boundaries. The first case when the circle is within the ROI, the second case is when the circle intersects with only one border and the last case is when the circle intersects two borders in a corner. Note that <i>w<sub>ij</sub>(r)</i> could be unbounded as <i>r</i> increases in practice. Following the recommendation by Ripley,<i>w<sub>ij</sub>(r)</i> could be restricted to be less than or equal to 4 for the gold-dot <i>i</i> having distance to <i>j</i> greater than the distance from the gold-dot <i>i</i> to the nearest boundary.<br>
+where <i>r<sub>ib</sub></i> is the distance from the gold-dot <i>i</i> to the nearest boundary, <i>r<sub>ib1</sub></i> and <i>r<sub>ib2</sub></i> are the distances from gold-dot <i>i</i> to the nearest two boundaries. The first case when the circle is within the ROI, the second case is when the circle intersects with only one border and the last case is when the circle intersects two borders in a corner. Note that <i>w<sub>ij</sub>(r)</i> could be unbounded as <i>r</i> increases in practice. Following the recommendation by Ripley, <i>w<sub>ij</sub>(r)</i> could be restricted to be less than or equal to 4 for the gold-dot <i>i</i> having distance to <i>j</i> greater than the distance from the gold-dot <i>i</i> to the nearest boundary.<br>
 The Besag's <i>L</i> function is just a normalization of the Ripley's function: <br>
 <p align="center">
 	<img src="./images/Formula07.png" width="200">
@@ -86,26 +86,48 @@ because for a homogenous Poisson process, the Ripley function is <i>K(r) = πr<s
 <br>
 <i>Fig. 6:</i> Besag’s L Function of Fig. 1.</p><br>
 
-9. “Pair correlation function” (Fig. 7) is measured with the Epanechnikov kernel [**[8]**](#references) and an Ohser-Stoyan edge corrector factor [**[9]**](#references). The estimation of the pair correlation function <i>g(r)</i> can be obtained by determining all pairs of gold-dots having inter-gold-dot distance in some small interval and counting their numbers. Since <i>g(r)</i> is a density function, a more elegant method can be employed. Following the recommendation of Penttinen et al. [**[6]**](#references), a kernel estimator is used for <i>g(r)</i>. The chosen kernel function is the Epanechnikov kernel: 
+9. “Pair correlation function” (Fig. 7) is measured with the Epanechnikov kernel [**[8]**](#references) and an Ohser-Stoyan edge corrector factor [**[9]**](#references). The estimation of the pair correlation function <i>g(r)</i> can be obtained by determining all pairs of gold-dots having inter-gold-dot distance in some small interval and counting their numbers. Since <i>g(r)</i> is a density function, a more elegant method can be employed. Following the recommendation of Penttinen et al. [**[6]**](#references), a kernel estimator is used for <i>g(r)</i>. The chosen kernel function is the Epanechnikov kernel:<br>
+<p align="center">
+	<img src="./images/Formula08.png" width="400">
+</p>
 
-The kernel δ is very important because it determines the degree of smoothness of the function. Based on Penttinen et al. [**[8]**](#references), set 
+The kernel δ is very important because it determines the degree of smoothness of the function. Based on Penttinen et al. [**[8]**](#references),<br>
+<p align="center">
+	<img src="./images/Formula09.png" width="150">
+</p>
+in this study. Then, the pair correlation function can be estimated as: <br>
+<p align="center">
+	<img src="./images/Formula10.png" width="300">
+</p>
 
+where <i>w(.)</i> is the Epanechnikov kernel function defined above, <i>λ=N/A</i> is the estimated density (gold-dots per unit area), <i>r<sub>ij</sub></i> is the distance between the gold-dots <i>i</i> and <i>j</i> and <i>s(r)</i> is the edge correction factor. For rectangular or square plots, the Ohser–Stoyan edge correction factor [**[9]**](#references) can be adopted:<br>
+<p align="center">
+	<img src="./images/Formula11.png" width="600">
+</p>
+where <i>b<sub>1</sub></i> and <i>b<sub>2</sub></i> are the side lengths of the image (that means the height and the width) and <i>s(r) &lt; width x height</i>.<br>
 
-in this study. Then, the pair correlation function can be estimated as:
-
-
-where <i>w(.)</i> is the Epanechnikov kernel function defined above, <i>λ=N/A</i> is the estimated density (gold-dots per unit area), <i>r<sub>ij</sub></i> is the distance between the gold-dots <i>i</i> and <i>j</i> and <i>s(r)</i> is the edge correction factor. For rectangular or square plots, the Ohser–Stoyan edge correction factor [**[9]**](#references) can be adopted:
-
-
-where <i>b<sub>1</sub></i> and <i>b<sub>2</sub></i> are the side lengths of the image (that means the height and the width) and <i>s(r)<A=width*height</i>.
-
+<br>
 <p align="center">
 	<img src="./images/Fig7.png" width="500" 
          alt="Pair Correlation Function">
 <br>
 <i>Fig. 7:</i> Pair Correlation Function g(r) of Fig. 1. In red g(r)=1 corresponds to a homogeneous Poisson process.</p><br>
 
-10. “Bond-orientational correlation function” (Fig. 8): The (global) bond-orientationel order parameter 6 was introduced by D. R. Nelson and B. I. Halperin to characterize the structural order in 2D systems [**[10-11]**](#references). It is given:
+10. “Bond-orientational correlation function” (Fig. 8): The (global) bond-orientationel order parameter 6 was introduced by D. R. Nelson and B. I. Halperin to characterize the structural order in 2D systems [**[10-11]**](#references). It is given:<br>
+
+with <i>ψ<sub>6</sub></i> is the local value for the particle <i>i</i> located at <i>r=(x,y)</i>:<br>
+
+
+where I is the imaginary unit (I<sup>2</sup>=-1), <i>θ<sub>ij</sub></i> is the angle between the particles <i>i</i> and <i>j</i> and an arbitrary but fixed reference axis and <i>n<sub>i</sub></i> the number of nearest neighbors of the dot <i>i</i>. The bond-orientational correlation length <i>ξ<sub>0</sub></i> was extracted from the “zero-momentum” correlation function of <i>ψ<sub>6</sub></i> which is called bond-orientational correlation function <i>g<sub>6</sub>(r)</i> and defined by:<br>
+
+where the denominator is related to the pair correlation function <i>g(r)</i> and:<br>
+
+
+For a 2D system (or the quasi long-ranged bond orientational order of the hexatic state), the envelope of this correlation function decay to zero exponentially [**[12-14]**](#references):<br>
+
+Hence, <i>ξ<sub>0</sub></i> is a measure for the typical size of the single crystalline domain, i.e., larger is <i>ξ<sub>0</sub></i> and larger is the crystalline domain (and better is the order). The bond-orientational correlation length <i>ξ<sub>0</sub></i> is determined by fitting <i>log(g<sub>6</sub>(r))</i> with a line Ar+B by using the fitting algorithm described in Numerical Recipes Section 15.2. The plugin shows the function <i>g<sub>6</sub>(r)</i> with the exponential fit in red and the length <i>ξ<sub>0</sub></i> (with the χ<sup>2</sup> test) in the same plot (Fig. 8). <br>
+
+<br>
 <p align="center">
 	<img src="./images/Fig8.png" width="500" 
          alt="Bond-orientational Correlation Function">
